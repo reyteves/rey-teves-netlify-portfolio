@@ -1,10 +1,12 @@
-import React from 'react';
+
 import { Code, Database, Wrench, MessageSquare } from 'lucide-react';
 import Header from './components/Header';
 import Profile from './components/Profile';
 import SkillCard from './components/SkillCard';
+import { useTheme } from './context/ThemeContext';
 
 function App() {
+  const { isDark } = useTheme();
   const skillSets = [
     {
       title: 'Development',
@@ -50,7 +52,7 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6 scroll-smooth">
+    <div className={`min-h-screen p-6 scroll-smooth ${isDark ? 'bg-gray-900' : 'bg-gray-100'}`}>
       <Header />
       <Profile />
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

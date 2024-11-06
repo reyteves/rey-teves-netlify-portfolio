@@ -7,8 +7,7 @@ html {
 }
 
 body {
-  background-color: #f3f4f6;
-  color: #1f2937;
+  @apply transition-colors duration-300;
 }
 
 @layer base {
@@ -18,8 +17,12 @@ body {
 }
 
 @layer components {
-  .neumorphic {
+  .neumorphic-light {
     @apply shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff];
+  }
+  
+  .neumorphic-dark {
+    @apply shadow-[20px_20px_60px_#1a1a1a,-20px_-20px_60px_#2c2c2c];
   }
 }
 
@@ -34,14 +37,13 @@ a, button {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  @apply bg-gray-100 dark:bg-gray-800;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
+  @apply bg-gray-400 dark:bg-gray-600 rounded-md;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  @apply bg-gray-500 dark:bg-gray-500;
 }
