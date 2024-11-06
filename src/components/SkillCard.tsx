@@ -12,10 +12,10 @@ export default function SkillCard({ title, Icon, skills }: SkillCardProps) {
   const { isDark } = useTheme();
   
   return (
-    <section className={`p-8 rounded-2xl ${
+    <section className={`p-8 rounded-2xl backdrop-blur-sm transition-all duration-300 ${
       isDark 
-        ? 'bg-gray-800 shadow-[20px_20px_60px_#1a1a1a,-20px_-20px_60px_#2c2c2c]' 
-        : 'bg-white shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff]'
+        ? 'bg-gray-800/80 shadow-[20px_20px_60px_#1a1a1a,-20px_-20px_60px_#2c2c2c]' 
+        : 'bg-white/80 shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff]'
     }`}>
       <div className="flex items-center gap-4 mb-6">
         <Icon className="w-8 h-8 text-blue-600" />

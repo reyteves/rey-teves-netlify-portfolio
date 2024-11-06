@@ -47,3 +47,10 @@ a, button {
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-500 dark:bg-gray-500;
 }
+
+/* Add this to your existing styles */
+@layer utilities {
+  .glass-effect {
+    @apply backdrop-blur-sm bg-white/10 dark:bg-black/10;
+  }
+}
