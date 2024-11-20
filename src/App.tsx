@@ -1,7 +1,8 @@
-import { Code, Database, Wrench, MessageSquare } from 'lucide-react';
+import { Code, Database, Wrench, MessageSquare, GraduationCap } from 'lucide-react';
 import Header from './components/Header';
 import Profile from './components/Profile';
 import SkillCard from './components/SkillCard';
+import EducationCard from './components/EducationCard';
 import WaveBackground from './components/WaveBackground';
 import { useTheme } from './context/ThemeContext';
 
@@ -59,7 +60,9 @@ function App() {
       }`}>
         <Header />
         <Profile />
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        {/* Skills Section */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
           {skillSets.map((skillSet, index) => (
             <SkillCard
               key={index}
@@ -68,6 +71,33 @@ function App() {
               skills={skillSet.skills}
             />
           ))}
+        </div>
+
+        {/* Education Section */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className={`p-8 rounded-2xl mb-8 ${
+            isDark 
+              ? 'bg-gray-800 shadow-[20px_20px_60px_#1a1a1a,-20px_-20px_60px_#2c2c2c]' 
+              : 'bg-white shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff]'
+          }`}>
+            <div className="flex items-center gap-4 mb-6">
+              <GraduationCap className="w-8 h-8 text-blue-600" />
+              <h2 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                Education
+              </h2>
+            </div>
+            <div className="space-y-6">
+              <EducationCard
+                degree="Master of Information Technology"
+                school="AMA Online Education"
+                status="In Progress"
+              />
+              <EducationCard
+                degree="Bachelor of Science in Information Technology"
+                school="Polytechnic University of the Philippines"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
