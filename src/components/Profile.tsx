@@ -12,14 +12,16 @@ export default function Profile() {
     }`}>
       <div className="flex flex-col gap-8">
         {/* Hero Image */}
-        <div className={`rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 ${
+        <div className={`rounded-lg overflow-hidden transform transition-transform duration-300 ease-in-out hover:scale-[0.85] ${
           isDark ? 'shadow-[0_0_30px_rgba(0,188,212,0.3)]' : 'shadow-[0_0_30px_rgba(0,96,100,0.2)]'
         }`}>
-          <img
-            src="https://res.cloudinary.com/dkn22bqth/image/upload/v1732109214/make-a-book-cover-titled---web-designs-by-rey-jesu_enopd1.png"
-            alt="Web Designs by Rey Jesus Teves"
-            className="w-full h-auto"
-          />
+          <div className="max-w-full mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
+            <img
+              src="https://res.cloudinary.com/dkn22bqth/image/upload/v1732109214/make-a-book-cover-titled---web-designs-by-rey-jesu_enopd1.png"
+              alt="Web Designs by Rey Jesus Teves"
+              className="w-full h-auto object-contain"
+            />
+          </div>
         </div>
 
         {/* Profile Content */}
