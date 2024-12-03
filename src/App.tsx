@@ -5,6 +5,7 @@ import SkillCard from './components/SkillCard';
 import EducationCard from './components/EducationCard';
 import WaveBackground from './components/WaveBackground';
 import { useTheme } from './context/ThemeContext';
+import BannerQuote from './components/BannerQuote';
 
 function App() {
   const { isDark } = useTheme();
@@ -59,6 +60,9 @@ function App() {
         isDark ? 'bg-gray-900/50' : 'bg-white/50'
       }`}>
         <Header />
+        <div className="max-w-4xl mx-auto mb-12">
+          <BannerQuote />
+        </div>
         <Profile />
         
         {/* Skills Section */}

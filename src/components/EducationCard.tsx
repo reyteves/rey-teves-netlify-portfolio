@@ -11,7 +11,7 @@ export default function EducationCard({ degree, school, status }: EducationCardP
   const { isDark } = useTheme();
   
   return (
-    <section className={`
+    <section id="educationCard" className={`
       p-8 rounded-2xl relative
       flex justify-center items-center overflow-hidden
       before:content-[''] before:absolute before:w-full 
