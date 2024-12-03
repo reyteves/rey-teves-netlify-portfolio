@@ -11,11 +11,11 @@ export default function BannerQuote() {
         className={`
           p-8 rounded-2xl relative
           flex justify-center items-center overflow-hidden
-          before:content-[''] before:absolute before:w-[calc(100%+4px)] 
+          before:content-[""] before:absolute before:w-[calc(100%+4px)] 
           before:h-[calc(100%+4px)] before:bg-[conic-gradient(from_0deg,rgb(0,183,255),rgb(255,48,255),rgb(0,183,255))]
           before:animate-[spin-slow] before:z-[1]
           before:-left-[2px] before:-top-[2px] before:rounded-2xl
-          after:content-[''] after:absolute after:bg-[#07182E]/80
+          after:content-[""] after:absolute after:bg-[#07182E]/80
           after:inset-[2px] after:rounded-2xl after:z-[2]
           bg-transparent
         `}
@@ -28,15 +28,15 @@ export default function BannerQuote() {
         <div className="relative z-10 text-center">
           <TypeAnimation
             sequence={[
-              'I create customized and unique websites that evolve and improve with every update.',
+              '"I create customized and unique websites that evolve and improve with every update."',
               2000,
-              'I build modern and responsive web experiences.',
+              '"I build modern and responsive web experiences."',
               2000,
-              'I transform ideas into interactive digital solutions.',
+              '"In addition to web development, I can also do technical writing, software documentation, and data entry tasks."',
               2000,
-              'I craft beautiful and functional web applications.',
+              '"I am creative and logical."',
               2000,
-              'In addition to web development, I can also do technical writing, software documentation, and data entry tasks.',
+              '"If you are looking for someone skilled with HTML, CSS, and JavaScript, familiar with GitHub and GitLab, and has other technical skills, contact me on LinkedIn"',
               2000,
             ]}
             wrapper="p"
