@@ -5,16 +5,19 @@ export default function Profile() {
   const { isDark } = useTheme();
   
   return (
-    <section className={`max-w-4xl mx-auto mb-12 p-8 rounded-2xl ${
-      isDark 
-        ? 'bg-gray-800 shadow-[20px_20px_60px_#1a1a1a,-20px_-20px_60px_#2c2c2c]' 
-        : 'bg-white shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff]'
-    }`}>
-      <div className="flex flex-col gap-8">
+    <section className={`
+      max-w-4xl mx-auto mb-12 relative
+      flex justify-center items-center overflow-hidden rounded-[20px]
+      before:content-[''] before:absolute before:w-[150px] 
+      before:h-[140%] before:bg-gradient-to-b before:from-[rgb(0,183,255)] 
+      before:to-[rgb(255,48,255)] before:animate-[rotBGimg_8s_ease-in-out_infinite]
+      after:content-[''] after:absolute after:bg-[#07182E] 
+      after:inset-[5px] after:rounded-[15px]
+      ${isDark ? 'bg-[#07182E]' : 'bg-[#07182E]'}
+    `}>
+      <div className="flex flex-col gap-8 p-8 relative z-[1] w-full">
         {/* Hero Image */}
-        <div className={`rounded-lg overflow-hidden transform transition-transform duration-300 ease-in-out hover:scale-[0.85] ${
-          isDark ? 'shadow-[0_0_30px_rgba(0,188,212,0.3)]' : 'shadow-[0_0_30px_rgba(0,96,100,0.2)]'
-        }`}>
+        <div className="rounded-lg overflow-hidden">
           <div className="max-w-full mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
             <img
               src="https://res.cloudinary.com/dkn22bqth/image/upload/v1732109214/make-a-book-cover-titled---web-designs-by-rey-jesu_enopd1.png"

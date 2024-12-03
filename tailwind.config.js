@@ -5,6 +5,10 @@ export default {
     extend: {
       animation: {
         'gradient': 'gradient 15s ease infinite',
+        'wave': 'wave 55s infinite linear',
+        'wave-slow': 'wave 50s infinite linear',
+        'wave-slower': 'wave 45s infinite linear',
+        'rotBGimg': 'rotBGimg 8s ease-in-out infinite',
       },
       keyframes: {
         gradient: {
@@ -17,6 +21,18 @@ export default {
             'background-position': '100% 50%',
           },
         },
+        wave: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        rotBGimg: {
+          'from': { 
+            transform: 'rotate(0deg)',
+          },
+          'to': { 
+            transform: 'rotate(360deg)',
+          },
+        }
       },
     },
   },
