@@ -9,6 +9,7 @@ export default {
         'wave-slow': 'wave 50s infinite linear',
         'wave-slower': 'wave 45s infinite linear',
         'rotBGimg': 'rotBGimg 8s ease-in-out infinite',
+        'spin-slow': 'spin 4s linear infinite',
       },
       keyframes: {
         gradient: {
@@ -32,6 +33,10 @@ export default {
           'to': { 
             transform: 'rotate(360deg)',
           },
+        },
+        spin: {
+          'from': { transform: 'rotate(0deg)' },
+          'to': { transform: 'rotate(360deg)' },
         }
       },
     },

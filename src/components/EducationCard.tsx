@@ -12,7 +12,7 @@ export default function EducationCard({ degree, school, status }: EducationCardP
   
   return (
     <section className={`
-      p-8 rounded-2xl backdrop-blur-sm transition-all duration-300 relative
+      p-8 rounded-2xl relative
       flex justify-center items-center overflow-hidden
       before:content-[''] before:absolute before:w-full 
       before:h-full before:bg-gradient-to-b before:from-[rgb(0,183,255)] 
@@ -20,7 +20,7 @@ export default function EducationCard({ degree, school, status }: EducationCardP
       before:inset-0 before:rounded-[20px]
       after:content-[''] after:absolute after:bg-[#07182E] 
       after:inset-[5px] after:rounded-[15px]
-      ${isDark ? 'bg-[#07182E]' : 'bg-[#07182E]'}
+      bg-[#07182E]
     `}>
       <div className="flex items-start gap-6 relative z-[1] w-full">
         <GraduationCap className="w-8 h-8 text-blue-600 mt-1" />
